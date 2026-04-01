@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register to Course</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body class="container" style="margin:40px; background-color:#f1f2eb;">
+
+<h2 style="text-align:center;">Register to Course</h2>
+
+<form method="POST" style="max-width:400px; margin:auto;">
+
+    <input name="name" class="form-input" placeholder="Name" required>
+
+    <input name="surname" class="form-input" placeholder="Surname" required>
+
+    <input name="age" type="number" class="form-input" placeholder="Age" required> <br>
+    <select name="level" class="form-select">
+        <option>A0</option>
+        <option>A1</option>
+        <option>A2</option>
+        <option>B1</option>
+        <option>B2</option>
+    </select>
+
+    <br> <button class="btn btn-primary">Register</button>
+</form>
+
+</body>
+</html>

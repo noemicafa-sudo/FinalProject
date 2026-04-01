@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Completed course </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body  class="container" style="margin:40px; background-color:#f1f2eb;">
+
+<h2 style="text-align:center;"> Final course </h2>
+
+<form method="POST" style="max-width:400px; margin:auto;">
+
+    <select name="student_id" class="form-select" required>
+        {% for s in students %}
+        <option value="{{ s.id }}">
+            {{ s.name }} {{ s.surname }}
+        </option>
+        {% endfor %}
+    </select>
+
+    <input type="date" name="date" class="form-input" required>
+
+    <button class="btn btn-success">Confirm</button>
+</form>
+
+</body>
+</html>

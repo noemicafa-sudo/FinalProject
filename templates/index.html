@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn Fast Italian</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body class="container" style="margin:40px; background-color:#f1f2eb;" >
+
+<div style="display:flex; justify-content:center; align-items:center; gap:20px; margin-top:20px;">
+    <img src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-italian-gesture-hand-sign-png-image_5865845.jpg"
+         width="80">
+    <h1 style="text-align:center;"> Learn Fast Italian</h1>
+</div>
+
+<hr>
+
+<div class="columns">
+
+    <div class="column col-4">
+        <div class="card p-2" style="background:#DDEDAD;">
+            <h4>Students</h4>
+            <p>{{ students }}</p>
+        </div>
+    </div>
+
+    <div class="column col-4">
+        <div class="card p-2" style="background:#bdb2ff;">
+            <h4>Reviews</h4>
+            <p>{{ review_count }}</p>
+            <p>Avg ⭐ {{ avg_rating }}</p>
+        </div>
+    </div>
+
+    <div class="column col-4">
+        <div class="card p-2" style="background:#F7D6E0;">
+            <h4> Completed </h4>
+            <p>{{ certifications }}</p>
+        </div>
+    </div>
+
+</div>
+
+<div style="margin-top:30px;">
+    <p>
+            Keep track of the students enrolled and analyze their feedbacks to improve the learning experience.
+    </p>
+</div>
+
+<div class="columns" style="margin-top:30px;">
+
+    <div class="column col-4">
+        <a href="/register" class="btn btn-primary btn-block">Register Student</a>
+    </div>
+
+    <div class="column col-4">
+        <a href="/complete" class="btn btn-success btn-block">Declare Completion</a>
+    </div>
+
+    <div class="column col-4">
+        <a href="/review" class="btn btn-warning btn-block">Student Review</a>
+    </div>
+
+</div>
+
+</body>
+</html>

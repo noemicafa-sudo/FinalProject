@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leave a review </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body class="container" style="margin:40px; background-color:#f1f2eb;" >
+<h2 style="text-align:center;">Student Review</h2>
+
+<form method="POST">
+
+    <input name="name" class="form-input" placeholder="Your name" required>
+    <br>
+    <select name="rating" class="form-select">
+        <option value="5">5 ⭐</option>
+        <option value="4">4 ⭐</option>
+        <option value="3">3 ⭐</option>
+        <option value="2">2 ⭐</option>
+        <option value="1">1 ⭐</option>
+    </select>
+    <br>
+    <textarea name="text" class="form-input" placeholder="Your review"></textarea>
+    <br>
+    <button class="btn btn-warning">Submit Review</button>
+</form>
+
+
+</body>
+</html>
